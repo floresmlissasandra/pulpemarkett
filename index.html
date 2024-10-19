@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Visualización</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <!-- Pantalla de carga -->
+<div id="preloader">
+    <div class="loader">
+        <img src="img/imagen.png" alt="Logo" class="logo">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="load-percentage">0%</p> <!-- El número del porcentaje -->
+    </div>
+</div>
+
+<div id="main-content" style="display:none;">
+    <!-- Contenido principal de la página -->
+</div>
+
+    <nav>
+        <div class="logo">
+            <img src="img/imagen.png" alt="Logo de la empresa">
+        </div>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li> <!-- Cambiado -->
+            <li><a href="#galeria">Galería</a></li> <!-- Cambiado -->
+            <li><a href="#footer">Nosotros</a></li> <!-- Cambiado -->
+        </ul>
+    </nav>
+
+    <!-- Sección de Header con Carrusel -->
+    <header>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/im1.jpg" alt="Imagen 1">
+                    <div class="caption">
+                        <h1>PulpeMarket</h1>
+                        <p>Todo lo que necesitas, a la vuelta de la esquina.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/im2.jpg" alt="Imagen 2">
+                    <div class="caption">
+                        <h1>PulpeMarket</h1>
+                        <p>Los mejores precios en tu barrio.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/im3.jpg" alt="Imagen 3">
+                    <div class="caption">
+                        <h1>PulpeMarket</h1>
+                        <p>Calidad y variedad todos los días.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Productos con Precios -->
+    <section id="productos" class="productos">
+    <section class="productos">
+        <h2>Nuestras Categorías de Productos</h2>
+        <div class="grid-productos">
+            <div class="producto">
+                <img src="img/carne.png" alt="Categoría 1">
+                <h3>Carnes</h3>
+                <p>Las mejores carnes frescas y de calidad para todos tus platillos.</p>
+                <p><strong>Precio: L. 250.00 /lb</strong></p>
+            </div>
+            <div class="producto">
+                <img src="img/frutas.png" alt="Categoría 2">
+                <h3>Verduras y Frutas</h3>
+                <p>Frutas y verduras frescas para una alimentación saludable.</p>
+                <p><strong>Precio: Desde L. 15.00</strong></p>
+            </div>
+            <div class="producto">
+                <img src="img/coke.png" alt="Categoría 3">
+                <h3>Refrescos</h3>
+                <p>Refrescos y bebidas para acompañar cada comida.</p>
+                <p><strong>Precio: L. 35.00</strong></p>
+            </div>
+            <div class="producto">
+                <img src="img/botanas.png" alt="Categoría 4">
+                <h3>Botanas</h3>
+                <p>Las mejores botanas para disfrutar en cualquier momento.</p>
+                <p><strong>Precio: Desde L. 20.00</strong></p>
+            </div>
+        </div>
+    </section>
+
+   
+ <!-- Galería de Imágenes -->
+ <section id="galeria" class="galeria"> 
+<section class="galeria">
+    <h2>Galería de Imágenes</h2>
+    <div class="grid-galeria">
+        <!-- Primeras 6 imágenes -->
+        <div class="imagen">
+            <img src="img/image1.jpg" alt="Imagen 1" class="imagen-galeria">
+        </div>
+        <div class="imagen">
+            <img src="img/fresco.jfif" alt="Imagen 2" class="imagen-galeria">
+        </div>
+        <div class="imagen">
+            <img src="img/MANTEQUILLA.png" alt="Imagen 3" class="imagen-galeria">
+        </div>
+        <div class="imagen">
+            <img src="img/ACEITE.jpg" alt="Imagen 4" class="imagen-galeria">
+        </div>
+        <div class="imagen">
+            <img src="img/Yogurt.jpg" alt="Imagen 5" class="imagen-galeria">
+        </div>
+        <div class="imagen">
+            <img src="img/Bebida.jpg" alt="Imagen 6" class="imagen-galeria">
+        </div>
+
+        <!-- Imágenes adicionales ocultas -->
+        <div class="imagen extra" style="display: none;">
+            <img src="img/VINAGRE.jpg" alt="Imagen 7" class="imagen-galeria">
+        </div>
+        <div class="imagen extra" style="display: none;">
+            <img src="img/pasta.jpg" alt="Imagen 8" class="imagen-galeria">
+        </div>
+        <div class="imagen extra" style="display: none;">
+            <img src="img/OREO.jpg" alt="Imagen 9" class="imagen-galeria">
+        </div>
+        <div class="imagen extra" style="display: none;">
+            <img src="img/bote.jpg" alt="Imagen 10" class="imagen-galeria">
+        </div>
+        <div class="imagen extra" style="display: none;">
+            <img src="img/spaguetti.JPG" alt="Imagen 11" class="imagen-galeria">
+        </div>
+        <div class="imagen extra" style="display: none;">
+            <img src="img/pan.jpg" alt="Imagen 12" class="imagen-galeria">
+        </div>
+    </div>
+
+    <button id="mostrarMas">Mostrar más</button>
+    <button id="mostrarMenos" style="display: none;">Mostrar menos</button>
+
+    <!-- Modal para visualización de imágenes en grande -->
+    <div id="modal" class="modal">
+        <span id="cerrar" class="cerrar">&times;</span>
+        <img class="modal-content" id="imagenModal">
+        <div id="caption"></div>
+
+        <!-- Botones de navegación -->
+        <button id="prev" class="navegacion">&lt;</button>
+        <button id="next" class="navegacion">&gt;</button>
+    </div>
+</section>
+
+<div id="main-content" style="display:none;">
+    <!-- Contenido principal de la página -->
+</div>
+    <!-- Footer -->
+    <footer>
+        <footer id="footer"></footer>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com" class="icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" class="icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="footer-text">Colonia, El Peligroso | Horario: 7:00 am - 9:00 pm</p>
+        <p class="footer-text">Derechos Reservados 2024</p>
+        <p class="footer-text">
+            Design by <a href="https://www.instagram.com" target="_blank">Sandra Ruiz</a>
+        </p>
+    </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

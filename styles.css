@@ -1,0 +1,420 @@
+/* Estilos para la pantalla de carga */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #f7e8e2; /* Color suave y cálido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader .logo {
+    width: 150px;
+    height: auto;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Barra de progreso */
+.progress-container {
+    width: 200px;
+    height: 10px;
+    background-color: #ffd9b3; /* Fondo pastel */
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #ff6f61; /* Color de barra cálido */
+    border-radius: 5px;
+}
+
+/* Ocultar preloader cuando esté cargado */
+body.loaded #preloader {
+    display: none;
+}
+
+body.loaded #main-content {
+    display: block;
+}
+
+
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #f28c8c; /* Color bonito */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+}
+
+ul li a:hover {
+    background-color: #ffd1dc; /* Color suave al pasar el mouse */
+    border-radius: 4px;
+}
+
+/* Estilos del carrusel */
+header {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    height: 760px;
+    margin: 40px auto 0 auto;
+    overflow: hidden;
+    background-color: #f7e8e2; /* Fondo bonito */
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navegacion {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+.navegacion:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Estilos para los captions o textos sobre las imágenes */
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(255, 165, 165, 0.5); /* Color semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.caption h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.caption p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Estilos de la sección de productos */
+.productos {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background-color: #ffe0b2; /* Fondo cálido */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(255, 102, 102, 0.8); /* Sombra sutil */
+}
+
+.producto img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Galería de imágenes */
+.galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.imagen img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagen:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Efecto de visualización de imágenes en grande */
+.imagen img:hover {
+    opacity: 0.85;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #f28c8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d45a5a;
+}
+
+/* Ocultar las imágenes extra al cargar la página */
+.extra-images {
+    display: none;
+}
+
+/* Modal para visualizar imágenes en grande */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    color: #e9c893;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4f4f4f; /* Fondo más oscuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-icons {
+    margin-bottom: 20px;
+}
+
+.footer-icons .icon {
+    margin: 0 10px;
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-icons .icon:hover {
+    color: #ff7f50; /* Efecto de color bonito */
+}
+
+.footer-text {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.footer-text a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #ff7f50;
+}
+/* Estilos para el porcentaje de carga */
+#load-percentage {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+}
